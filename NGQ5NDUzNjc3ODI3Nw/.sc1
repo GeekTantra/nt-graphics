@@ -2,7 +2,7 @@
 for f in `ls -1 *-220x158.jpg`
 do
 F=`echo ${f}|sed -e 's/-220x158\.jpg//'`
-tintilize -m '#C29B0D' -c 10 $f .tmp.jpg
+tintilize -m '#CEB24B' -c 10 $f .tmp.jpg
 montage -tile 1x2 -geometry 220x158+0+0 $f .tmp.jpg $F-tile.jpg
 rm .tmp.jpg
 done;
