@@ -1,0 +1,8 @@
+#!/bin/bash
+for f in `ls -1 *-220x158.jpg`
+do
+F=`echo ${f}|sed -e 's/-220x158\.jpg/-/'`
+zoomblur -a 1.05 $f .tmp.jpg
+montage -tile 1x2 -geometry 220x158+0+0 $f .tmp.jpg $F.jpg
+rm .tmp.jpg
+done;
